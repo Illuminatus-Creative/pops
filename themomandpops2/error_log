@@ -1,0 +1,8 @@
+[05-May-2026 08:25:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/jgyq9ff3owbi/public_html/wp-content/themes/themomandpops/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/jgyq9ff3owbi/public_html/wp-content/themes/themomandpops/index.php on line 15
+[03-Jun-2026 13:53:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/jgyq9ff3owbi/public_html/wp-content/themes/themomandpops/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/jgyq9ff3owbi/public_html/wp-content/themes/themomandpops/index.php on line 15

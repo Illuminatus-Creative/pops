@@ -1,0 +1,86 @@
+/*!
+Theme Name: themomandpops
+*/
+
+.dgwt-wcas-style-pirx .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+    padding: 13px 24px 13px 48px;
+    line-height: 24px;
+    font-size: 17px;
+    border: 0px solid transparent !important;
+    border-radius: 30px;
+    height: auto;
+    font-family: Roboto, sans-serif;
+    background-color: #eee;
+}
+p.woocommerce-result-count {
+    position: relative;
+    z-index: 9999;
+}
+
+form.woocommerce-ordering {
+    position: relative;
+    z-index: 9999;
+}
+
+
+button.single_add_to_cart_button.button.alt {
+    padding: 30px 40px;
+    font-size: 26px;
+    background-color: #fff;
+    color: #33599c;
+    border-radius: 50px;
+    font-weight: 500;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.7s ease-out;
+    display: inline-block;
+    border: 2px solid #33599c;
+    line-height: 0;
+}
+
+.for-col {
+    column-count: 2;
+}
+
+/* .btn.btn-primary {
+    left: 380px;
+    bottom: 69px;
+} */
+
+
+.pagination li
+ {
+    list-style: none;
+    display: inline-block;
+    background: #33599c;
+    padding: 3px 10px;
+    color: #000;
+}
+
+.pagination li a
+ {
+    color: #fff;
+}
+
+.pagination li:hover {
+    background: #be060600;
+    color: #33599c;
+    border: 1px solid #33599c;
+}
+.pagination li:hover a {
+    color:#33599c;
+}
+.pagination li a:hover
+ {
+    background: #be060600;
+    color: #33599c;
+}
+
+
+form.search-form {
+    display: none;
+}
+
+
+
+
