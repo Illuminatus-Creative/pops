@@ -175,6 +175,11 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * v2: Per-page structured data (replaces the hardcoded JSON-LD removed from header.php).
+ */
+require get_template_directory() . '/inc/schema.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
