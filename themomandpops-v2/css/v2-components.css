@@ -1,0 +1,62 @@
+/*
+ * Mom & Pops v2 — new component styles (Projects 1, 2A, 3)
+ * Tokens locked in docs/brand-reference.md (§3 color, §4 type).
+ * New UI only; the legacy custom.css is left intact.
+ */
+
+/* ============================================================
+   Button tiers (brand reference §3 — formalizes the two existing
+   styles + a tertiary link; contrast: black-on-yellow only,
+   blue-on-white only — no reverse type on body).
+   ============================================================ */
+.mp-btn-primary,
+.mp-btn-secondary {
+    display: inline-block;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 24px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+/* Primary — solid yellow, black text (the loudest action). */
+.mp-btn-primary {
+    background-color: #e5b538;
+    color: #000;
+    border: 2px solid #000;
+    box-shadow: #33599c 4px 4px 0 0;
+}
+.mp-btn-primary:hover,
+.mp-btn-primary:focus {
+    box-shadow: #33599c 0 0 0 0;
+    transform: translate(2px, 2px);
+    color: #000;
+}
+
+/* Secondary — outline blue on white. */
+.mp-btn-secondary {
+    background-color: #fff;
+    color: #33599c;
+    border: 2px solid #33599c;
+}
+.mp-btn-secondary:hover,
+.mp-btn-secondary:focus {
+    background-color: #33599c;
+    color: #fff;
+}
+
+/* Tertiary — text link in brand blue. */
+.mp-btn-tertiary {
+    color: #33599c;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+.mp-btn-tertiary:hover,
+.mp-btn-tertiary:focus {
+    border-bottom-color: #33599c;
+}
