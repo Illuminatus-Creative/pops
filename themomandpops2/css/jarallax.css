@@ -1,0 +1,68 @@
+
+
+.jarallax {
+    min-height: 100vh;
+    /* border-radius: 30px; */
+}
+
+
+/* Demo Content */
+
+.demo-content {
+
+    background-color: #f7f7f7;
+
+    padding: 80px;
+
+}
+
+
+
+
+
+/* Carousel */
+
+.demo-carousel {
+
+    background-color: rgb(39, 35, 51);
+
+}
+
+
+@media screen and (max-width: 780px) {
+
+    .demo-carousel .demo-carousel-item {
+
+        width: 50%;
+
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .demo-carousel .demo-carousel-item {
+
+        width: 100%;
+
+    }
+
+}
+
+
+
+
+
+/* Mobile */
+
+@media screen and (max-width: 500px) {
+
+    .demo-gap,
+
+    .demo-content {
+
+        padding: 50px 30px;
+
+    }
+
+}
