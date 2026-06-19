@@ -37,7 +37,7 @@ get_header();
 $cta1_label = get_field('banner_first_btn') ?: 'Catering in Austin & Dallas';
 $cta1_link  = get_field('banner_first_btn_link') ?: '/catering/';
 $cta2_label = get_field('banner_second_btn') ?: 'Order Pops — Ships Nationwide';
-$cta2_link  = get_field('banner_second_btn_link') ?: '/shop/';
+$cta2_link  = get_field('banner_second_btn_link') ?: ( function_exists('wc_get_page_permalink') ? wc_get_page_permalink('shop') : '/shop/' );
 $cta3_label = get_field('banner_third_btn') ?: 'Find Us in Austin';
 $cta3_link  = get_field('banner_third_btn_link') ?: '/find-us/';
 ?>

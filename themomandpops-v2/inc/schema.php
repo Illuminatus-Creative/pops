@@ -32,11 +32,22 @@ function themomandpops_v2_structured_data() {
 
 	$schema = null;
 
-	if ( is_page_template( 'page-templates/catering.php' ) ) {
+	// Austin LocalBusiness on the catering template — but NOT on the legacy
+	// /catering-in-dallas/ page, which still shares this template until it is
+	// retired (it must not advertise the Austin storefront — decision D4).
+	if ( is_page_template( 'page-templates/catering.php' ) && ! is_page( 'catering-in-dallas' ) ) {
 		$schema = themomandpops_v2_austin_localbusiness();
 	} elseif ( is_page_template( 'page-templates/dallas-paleta-catering.php' ) ) {
 		$schema = themomandpops_v2_dallas_service();
 	}
+
+	/**
+	 * Filter the per-page structured data before output — e.g. to set the
+	 * final Dallas service-area cities (input B) without editing this file.
+	 *
+	 * @param array|null $schema The schema array, or null when none applies.
+	 */
+	$schema = apply_filters( 'themomandpops_v2_structured_data_schema', $schema );
 
 	if ( empty( $schema ) ) {
 		return;
