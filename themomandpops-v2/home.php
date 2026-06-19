@@ -31,10 +31,21 @@ get_header();
                   </p>
 
 
-<div class="banner-btn">
-                        <a href="<?php the_field('banner_first_btn_link'); ?>" class="button-74"><?php the_field('banner_first_btn'); ?></a>
-                        <a href="<?php the_field('banner_second_btn_link'); ?>" class="button-74"><?php the_field('banner_second_btn'); ?></a>
-                    </div>
+<?php
+// P1.3 — ranked buyer paths (one primary action; secondary + tertiary beside it).
+// ACF-driven with defaults so the hero renders before final copy (input A) lands.
+$cta1_label = get_field('banner_first_btn') ?: 'Catering in Austin & Dallas';
+$cta1_link  = get_field('banner_first_btn_link') ?: '/catering/';
+$cta2_label = get_field('banner_second_btn') ?: 'Order Pops — Ships Nationwide';
+$cta2_link  = get_field('banner_second_btn_link') ?: '/shop/';
+$cta3_label = get_field('banner_third_btn') ?: 'Find Us in Austin';
+$cta3_link  = get_field('banner_third_btn_link') ?: '/find-us/';
+?>
+<div class="hero-cta">
+    <a href="<?php echo esc_url($cta1_link); ?>" class="mp-btn-primary"><?php echo esc_html($cta1_label); ?></a>
+    <a href="<?php echo esc_url($cta2_link); ?>" class="mp-btn-secondary"><?php echo esc_html($cta2_label); ?></a>
+    <a href="<?php echo esc_url($cta3_link); ?>" class="mp-btn-tertiary"><?php echo esc_html($cta3_label); ?></a>
+</div>
 
                 </div>
               </div>
@@ -64,6 +75,8 @@ $banner_image_alt = get_post_meta($banner_image_id, '_wp_attachment_image_alt', 
           </div>
         </section>
 
+        <?php get_template_part( 'template-parts/components/social-proof' ); ?>
+
         <section class="homesec3">
          <div class="container">
           <div class="row">
@@ -71,6 +84,16 @@ $banner_image_alt = get_post_meta($banner_image_id, '_wp_attachment_image_alt', 
               <div class="inner-homesec3">
                 <h3 class="sametitle"><?php the_field('about_title'); ?></h3>
                 <?php the_field('the_story_content'); ?>
+<?php
+// P1.5 / D5 — emphasized testimonial pull-quote inside About (not a new band). Renders only if filled.
+$home_quote    = get_field('home_testimonial_quote');
+$home_quote_by = get_field('home_testimonial_attribution');
+if ( $home_quote ) : ?>
+<blockquote class="mp-pullquote">
+  <p class="mp-pullquote__text"><?php echo esc_html($home_quote); ?></p>
+  <?php if ( $home_quote_by ) : ?><cite class="mp-pullquote__cite"><?php echo esc_html($home_quote_by); ?></cite><?php endif; ?>
+</blockquote>
+<?php endif; ?>
 <div class="banner-btn">
                  
                         <a href="<?php the_field('about_btn_link'); ?>" class="button-74"><?php the_field('about_btn'); ?></a>
