@@ -240,6 +240,27 @@ $second_image_alt = get_post_meta($second_image_id, '_wp_attachment_image_alt', 
 
 
 
+<?php
+// P2A — quote form embedded from an ACF field holding the Gravity Forms shortcode
+// (not hardcoded), so the form can be set/swapped per page in wp-admin.
+$quote_shortcode = get_field('quote_form_shortcode');
+if ( $quote_shortcode ) : ?>
+<section class="mp-quote-form" id="quote">
+  <div class="container">
+    <?php if ( get_field('quote_form_heading') ) : ?>
+      <h3 class="sametitle"><?php the_field('quote_form_heading'); ?></h3>
+    <?php endif; ?>
+    <?php if ( get_field('quote_form_intro') ) : ?>
+      <div class="mp-quote-form__intro"><?php the_field('quote_form_intro'); ?></div>
+    <?php endif; ?>
+    <div class="mp-quote-form__form">
+      <?php echo do_shortcode( $quote_shortcode ); ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
+
 <section class="cateringsec4" data-jarallax>
   <div class="container">
     <div class="row">
@@ -318,6 +339,20 @@ endif;
    
   </div>
 </section>
+
+<?php
+// Cross-link to the Dallas page (P3.3 / P3.7). ACF-driven with an Austin->Dallas default.
+$xlink_url  = get_field('cross_link_url') ?: '/dallas-paleta-catering/';
+$xlink_text = get_field('cross_link_text') ?: 'Planning an event in the Dallas area? See our Dallas paleta catering.';
+$xlink_cta  = get_field('cross_link_cta') ?: 'Dallas Paleta Catering';
+if ( $xlink_url ) : ?>
+<section class="mp-crosslink">
+  <div class="container">
+    <p class="mp-crosslink__text"><?php echo esc_html($xlink_text); ?></p>
+    <a href="<?php echo esc_url($xlink_url); ?>" class="mp-btn-secondary"><?php echo esc_html($xlink_cta); ?></a>
+  </div>
+</section>
+<?php endif; ?>
 
 <?php
 //get_sidebar();

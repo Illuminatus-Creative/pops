@@ -42,6 +42,16 @@ Legend: ⬜ not started · ✅ done
   - `source_url` (URL, optional — link to the specific Google review)
 - ⬜ Transcribe the 3 chosen reviews (input F2). Do **not** alter review wording.
 
+### B5. Catering pages — quote form + cross-link (Projects 2A / 3)
+Add these to the catering ACF field group (already shown on `catering.php`; also
+needs the Dallas template location rule from B1):
+- ⬜ `quote_form_shortcode` (Text) — the **Gravity Forms shortcode**, e.g. `[gravityform id="1" title="false" ajax="true"]`. Rendered via `do_shortcode`; the form section is hidden until this is set. *(Per-page, so Austin and Dallas can use the same form or different ones.)*
+- ⬜ `quote_form_heading` (Text) — section heading above the form.
+- ⬜ `quote_form_intro` (WYSIWYG/Textarea) — context copy above the form.
+- ⬜ `cross_link_url` (Text/URL) — defaults: Austin page → `/dallas-paleta-catering/`, Dallas page → `/catering/`.
+- ⬜ `cross_link_text` (Text) — cross-link lead-in copy (has a city default).
+- ⬜ `cross_link_cta` (Text) — cross-link button label (has a city default).
+
 ---
 
 ## C. Pages, redirects, navigation (Project 3)

@@ -177,3 +177,81 @@
     font-weight: 600;
     font-style: normal;
 }
+
+/* ============================================================
+   Quote form (P2A) — section wrapper + a light Gravity Forms
+   skin so the embedded form matches the theme. The form itself
+   is rendered from an ACF field (quote_form_shortcode).
+   ============================================================ */
+.mp-quote-form {
+    padding: 70px 0;
+}
+.mp-quote-form__intro {
+    max-width: 720px;
+    margin: 0 auto 28px;
+    text-align: center;
+    font-size: 17px;
+}
+.mp-quote-form .gform_wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+}
+.mp-quote-form .gform_wrapper .gfield_label {
+    font-weight: 600;
+    color: #121212;
+}
+.mp-quote-form .gform_wrapper input[type="text"],
+.mp-quote-form .gform_wrapper input[type="email"],
+.mp-quote-form .gform_wrapper input[type="tel"],
+.mp-quote-form .gform_wrapper input[type="number"],
+.mp-quote-form .gform_wrapper input[type="date"],
+.mp-quote-form .gform_wrapper select,
+.mp-quote-form .gform_wrapper textarea {
+    width: 100%;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 16px;
+    background: #fff;
+}
+.mp-quote-form .gform_wrapper input:focus,
+.mp-quote-form .gform_wrapper select:focus,
+.mp-quote-form .gform_wrapper textarea:focus {
+    outline: none;
+    border-color: #33599c;
+    box-shadow: 0 0 0 2px rgba(51, 89, 156, 0.15);
+}
+.mp-quote-form .gform_wrapper .gform_button,
+.mp-quote-form .gform_wrapper input[type="submit"] {
+    background-color: #e5b538;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 30px;
+    box-shadow: #33599c 4px 4px 0 0;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 12px 28px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.mp-quote-form .gform_wrapper .gform_button:hover,
+.mp-quote-form .gform_wrapper input[type="submit"]:hover,
+.mp-quote-form .gform_wrapper .gform_button:focus,
+.mp-quote-form .gform_wrapper input[type="submit"]:focus {
+    box-shadow: #33599c 0 0 0 0;
+    transform: translate(2px, 2px);
+}
+
+/* ============================================================
+   Cross-link band (P3.7) — Austin <-> Dallas reciprocal links.
+   ============================================================ */
+.mp-crosslink {
+    background: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+}
+.mp-crosslink__text {
+    font-size: 20px;
+    color: #121212;
+    margin: 0 0 18px;
+}
